@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>627</width>
+    <height>425</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>记账工具</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_5">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QTabWidget" name="Tab">
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="tab1">
+        <attribute name="title">
+         <string>进货</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>日期</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>品名</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>重量(斤)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>进价</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>操作</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <item>
+            <widget class="QDateEdit" name="date"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="classes">
+             <property name="iconSize">
+              <size>
+               <width>30</width>
+               <height>30</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="weight">
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="price">
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>10.000000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QPushButton" name="insert">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>添加</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="sub">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>删除</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWeight">
+           <column>
+            <property name="text">
+             <string>品种</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>重量(斤)</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>进价</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>总价</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="totalPrice"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QPushButton" name="save">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab2">
+        <attribute name="title">
+         <string>出货</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>日期</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_16">
+             <property name="text">
+              <string>店名</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>品名</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>重量(公斤)</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>操作</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <item>
+            <widget class="QDateEdit" name="date2"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="store"/>
+           </item>
+           <item>
+            <widget class="QComboBox" name="classes2"/>
+           </item>
+           <item>
+            <widget class="QDoubleSpinBox" name="weight2">
+             <property name="maximum">
+              <double>1000.000000000000000</double>
+             </property>
+             <property name="singleStep">
+              <double>0.100000000000000</double>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QPushButton" name="insert2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>添加</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="sub2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>删除</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
+           <item>
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>自动导入当日进货单：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="chooseFiles">
+             <property name="text">
+              <string>选择进货单文件夹</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="filesName"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="batchImport">
+             <property name="text">
+              <string>自动导入</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="tableWeight2">
+           <column>
+            <property name="text">
+             <string>店名</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>品种</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>重量(公斤)</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>当日售价</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>总价(含税13%)</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="totalPrice2"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QPushButton" name="save2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab3">
+        <attribute name="title">
+         <string>核对</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_11">
+           <item>
+            <widget class="QLabel" name="label_17">
+             <property name="text">
+              <string>核对日期</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_10">
+             <item>
+              <widget class="QDateEdit" name="date3"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="search">
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableWidget" name="tableWeight3">
+             <column>
+              <property name="text">
+               <string>品名</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>进货总重(斤)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>出货总重(斤)</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>核对结果</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>详细查询</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QComboBox" name="classSearch"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="selectClass">
+               <property name="text">
+                <string>查询</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTextBrowser" name="classText"/>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>统计</string>
+        </attribute>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>年份</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>月份</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>操作</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QSpinBox" name="year">
+             <property name="minimum">
+              <number>2000</number>
+             </property>
+             <property name="maximum">
+              <number>3000</number>
+             </property>
+             <property name="value">
+              <number>2021</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="month">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>12</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="search2">
+             <property name="text">
+              <string>查询</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="text"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>店铺</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_18">
+             <property name="text">
+              <string>操作</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QComboBox" name="storeSearch"/>
+           </item>
+           <item>
+            <widget class="QPushButton" name="selectStore">
+             <property name="text">
+              <string>查询</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QTextBrowser" name="text2"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
